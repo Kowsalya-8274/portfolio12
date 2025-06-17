@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me | Kowsalya</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    .header-bar {
+      background-color: black;
+      color: white;
+      text-align: center; 
+      padding: 2rem 1rem; 
+      margin-bottom: 30px;
+    }
+
+    .about-container {
+      width: 90%; 
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .toggle-button {
+      display: block;
+      width: 100%; 
+      margin: 10px 0;
+      padding: 15px 20px;
+      font-size: 1rem;
+      font-weight: bold;
+      color: darkred;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      cursor: pointer;
+      text-align: left; /* Align text to the left */
+      transition: background-color 0.3s; /* Smooth hover effect */
+    }
+
+    .toggle-button:hover {
+      background-color: #f0f0f0;
+    }
+
+    .hidden-content {
+      display: none; 
+      padding: 20px;
+      margin-bottom: 10px;
+      background-color: #eef5ff;
+      border-left: 4px solid darkred;
+      border-radius: 0 0 8px 8px; 
+      line-height: 1.6;
+    }
+    
+    .hidden-content h4 {
+        margin: 0; 
+        font-style: normal; 
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="header-bar">
+    <h1>About Me</h1>
+  </div>
+
+  <div class="about-container">
+    <button class="toggle-button" onclick="toggleContent('content1')">Education</button>
+    <div id="content1" class="hidden-content">
+      <h4>
+        <b>B.Tech in Computer Science and AI (2023-2024)</b><br>
+        Sri Vasavi Engineering College - 8.98 CGPA<br><br>
+        <b>Diploma in Civil Engineering (2020-2023)</b><br>
+        Sree Vidyanikethan Engineering College - 91.86%<br><br>
+        <b>Secondary Education (2020)</b><br>
+        Sai Vidyanikethan EM High School - 589/600
+      </h4>
+    </div>
+
+    <button class="toggle-button" onclick="toggleContent('content2')">Personal Details</button>
+    <div id="content2" class="hidden-content">
+      <h4>
+        <b>Father Name:</b> Dakshanadi Muni Reddy<br>
+        <b>Location:</b> Sullurpeta, Nellore<br>
+        <b>Date of Birth:</b> 2004-09-24<br>
+        <b>Languages Known:</b> Telugu, English, Tamil
+      </h4>
+    </div>
+  
+    <button class="toggle-button" onclick="toggleContent('content3')">Internships</button>
+    <div id="content3" class="hidden-content">
+      <h4>
+        1. Google Web Developer Virtual Internship<br>
+        2. Google AI/ML Virtual Internship
+      </h4>
+    </div>
+
+    <button class="toggle-button" onclick="toggleContent('content4')">Certifications & Skills</button>
+    <div id="content4" class="hidden-content">
+      <h4>
+        <b>NPTEL:</b> Internet of Things<br>
+        <b>Virtual Internships:</b> Google Web Development | Google AI-ML<br>
+        <b>Workshops:</b> AWS with Python | Django | Power BI | React JS<br>
+        <b>Participation:</b> AWS 24-Hour Hackathon | Cyber Security | AI<br>
+        <b>Global Certifications:</b>
+        <ul>
+            <li>AZ-900: Azure AI Fundamentals (Microsoft)</li>
+            <li>Associate Developer Java (MongoDB)</li>
+            <li>Cloud Infrastructure GenAI (Oracle)</li>
+            <li>Fabric Analytics Engineer (Microsoft)</li>
+            <li>DP-100: Azure Data Scientist (Microsoft)</li>
+        </ul>
+      </h4>
+    </div>
+  </div>
+
+  <script>
+    function toggleContent(id) {
+      const allContent = document.querySelectorAll('.hidden-content');
+      const targetContent = document.getElementById(id);
+      
+      allContent.forEach(content => {
+        if (content.id !== id) {
+          content.style.display = "none";
+        }
+      });
+
+      targetContent.style.display = targetContent.style.display === "block" ? "none" : "block";
+    }
+  </script>
+
+</body>
+</html>
